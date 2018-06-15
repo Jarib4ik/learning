@@ -1,17 +1,17 @@
 function add(a, b) {
-    return (a + b);
+    return a + b;
 }
 
 function sub(a, b) {
-    return (b - a);
+    return b - a;
 }
 
 function mul(a, b) {
-    return (a * b)
+    return a * b;
 }
 
 function div(a, b) {
-    return (a / b);
+    return a / b;
 }
 
 console.log(add(div(50, 5), (mul(100, 50))));
