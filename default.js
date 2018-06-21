@@ -18,4 +18,4 @@ function div(a, b) {
 // console.log(div(mul(20, 9), (div(50, 5))));
 // console.log(sub(add(56, 35), (mul(9, 5))));
 // console.log(mul(div(600, 50), (sub(9, 3))));
-// console.log(add( sub( div(30, 2), mul(20, 2)), (div(50, 5))));
+// console.log(add(sub(div(30, 2), mul(20, 2)), (div(50, 5))));
