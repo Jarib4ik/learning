@@ -2,9 +2,8 @@
 var a = prompt('Введите первое число', );
 var b = prompt('Введите второе число', );
 
-
-function sum(a, b) {
-    return + a.replace(/\D/g, "") + +b.replace(/\D/g, "")
+function add(a, b) {
+    return a + b
 }
 
-alert( sum(a, b))
+alert(add(Number(a), Number(b)));
