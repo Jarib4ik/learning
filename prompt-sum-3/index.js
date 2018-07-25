@@ -1,21 +1,18 @@
 function isNumber(a, b) {
-    if (!isNaN(a) && !isNaN(b)) {
-        if (typeof a === 'number' && typeof b === 'number') {
-            return true;
-        }
-    }
-    return false;
+    var isNumber = typeof a === 'number' && typeof b === 'number';
+
+    return isNumber && (!isNaN(a) && !isNaN(b))
 }
 
 function add(a, b) {
-    return Number(a) + Number(b);
+    return a + b;
 }
 
-var a = prompt('Введите первое число');
-var b = prompt('Введите второе число');
+var a = Number(prompt('Введите первое число'));
+var b = Number(prompt('Введите второе число'));
 
-if (isNumber(Number(a), Number(b))) {
-        alert(add(a, b));
+if (isNumber(a, b)) {
+    alert(add(a, b));
 } else {
     throw new TypeError('invalid type of arguments')
 }
