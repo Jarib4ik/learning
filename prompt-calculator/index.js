@@ -11,15 +11,15 @@ const isNumber = (a, b) => {
     return isNumber && (!isNaN(a) && !isNaN(b));
 }
 
-const calculate = choiceToDo => {
+const calculate = (choiceToDo, arg1, arg2) => {
     if (choiceToDo === '+') {
-        return add(a, b);
+        return add(arg1, arg2);
     } else if (choiceToDo === '-') {
-        return sub(a, b);
+        return sub(arg1, arg2);
     } else if (choiceToDo === '*') {
-        return mul(a, b);
+        return mul(arg1, arg2);
     } else if (choiceToDo === '/') {
-        return div(a, b);
+        return div(arg1, arg2);
     } else {
         throw new TypeError('invalid type of arguments');
     }
@@ -32,7 +32,7 @@ const a = Number(prompt('Введите первое число'));
 const b = Number(prompt('Введите второе число'));
 
 if (isNumber(a, b)) {
-    alert(calculate(choiceToDo))
+    alert(calculate(choiceToDo, a, b))
 } else {
     throw new TypeError('invalid type of arguments')
 }
