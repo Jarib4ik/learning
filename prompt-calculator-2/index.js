@@ -11,19 +11,12 @@ const isNumber = (a, b) => {
     return isNumber && (!isNaN(a) && !isNaN(b));
 }
 
-const calculate = (choiceToDo, arg1, arg2) => {
-    if (choiceToDo === '+') {
-        return add(arg1, arg2);
-    } else if (choiceToDo === '-') {
-        return sub(arg1, arg2);
-    } else if (choiceToDo === '*') {
-        return mul(arg1, arg2);
-    } else if (choiceToDo === '/') {
-        return div(arg1, arg2);
-    } else {
-        throw new TypeError('invalid type of arguments');
-    }
-}
+const calculate = {
+    '+': add,
+    '-': sub,
+    '*': mul,
+    '/': div,
+};
 
 const choiceToDo = String(prompt('Выберите действие \r\n "+", "-", "*", "/"'));
 
@@ -31,8 +24,10 @@ const a = Number(prompt('Введите первое число'));
 
 const b = Number(prompt('Введите второе число'));
 
+const operation = calculate[choiceToDo];
+
 if (isNumber(a, b)) {
-    alert(calculate(choiceToDo, a, b))
+    alert(operation(a, b))
 } else {
-    throw new TypeError('invalid type of arguments')
+    throw new TypeError(`[${operation.name}]: invalid type of arguments`);
 }
