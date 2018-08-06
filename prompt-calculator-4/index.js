@@ -25,7 +25,6 @@ const startCalculator = () => {
     const question = (func, question, dataType) => {
         let result;
         while (!func(result)) {
-            if (!Boolean(result) === false) continue;
             result = dataType(prompt(question));
         }
         return result;
