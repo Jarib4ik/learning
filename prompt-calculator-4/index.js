@@ -5,7 +5,7 @@ const div = (a, b) => a / b;
 const isNumber = number => {
     let isNumber = typeof number === 'number'
     return isNumber && (!isNaN(number));
-}
+};
 
 const startCalculator = () => {
     const calculate = {
@@ -16,11 +16,11 @@ const startCalculator = () => {
     };
     const verifiChoiseToDo = str => {
         return str === '+' || str === '-' || str === '*' || str === '/';
-    }
+    };
 
-    let QuestionToDo = 'Выберите действие \r\n "+", "-", "*", "/"';
-    let QuestionOneNumber = 'Введите первое число';
-    let QuestionTwoNumber = 'Введите второе число';
+    const QUESTION_TO_DO = 'Выберите действие \r\n "+", "-", "*", "/"';
+    const QUESTION_ONE_NUMBER = 'Введите первое число';
+    const QUESTION_TWO_NUMBER = 'Введите второе число';
 
     const question = (func, question, dataType) => {
         let result;
@@ -28,14 +28,13 @@ const startCalculator = () => {
             result = dataType(prompt(question));
         }
         return result;
-    }
+    };
 
-    let choiceToDo = question(verifiChoiseToDo, QuestionToDo, String);
-    let firstNumber = question(isNumber, QuestionOneNumber, Number);
-    let secondNumber = question(isNumber, QuestionTwoNumber, Number);
+    const choiceToDo = question(verifiChoiseToDo, QUESTION_TO_DO, String);
+    const firstNumber = question(isNumber, QUESTION_ONE_NUMBER, Number);
+    const secondNumber = question(isNumber, QUESTION_TWO_NUMBER, Number);
 
     const operation = calculate[choiceToDo];
-
     const result = operation(firstNumber, secondNumber);
 
     if (isNumber(result)) {
