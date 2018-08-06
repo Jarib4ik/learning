@@ -18,21 +18,32 @@ const startCalculator = () => {
         return str === '+' || str === '-' || str === '*' || str === '/';
     }
 
-    let choiceToDo;
-    let firstNumber;
-    let secondNumber;
+    let QuestionToDo = 'Выберите действие \r\n "+", "-", "*", "/"';
+    let QuestionOneNumber = 'Введите первое число';
+    let QuestionTwoNumber = 'Введите второе число';
 
-    while (!verifiChoiseToDo(choiceToDo) && !isNumber(firstNumber) && !isNumber(secondNumber)) {
-        choiceToDo = String(prompt('Выберите действие \r\n "+", "-", "*", "/"'));
-        firstNumber = Number(prompt('Введите первое число'));
-        secondNumber = Number(prompt('Введите второе число'));
+    const question = (func, question, dataType) => {
+        let result;
+        while (!func(result)) {
+            if (!Boolean(result) === false) continue;
+            result = dataType(prompt(question));
+        }
+        return result;
     }
+
+    let choiceToDo = question(verifiChoiseToDo, QuestionToDo, String);
+    let firstNumber = question(isNumber, QuestionOneNumber, Number);
+    let secondNumber = question(isNumber, QuestionTwoNumber, Number);
 
     const operation = calculate[choiceToDo];
 
     const result = operation(firstNumber, secondNumber);
 
-    alert(result);
+    if (isNumber(result)) {
+        alert(result);
+    } else {
+        throw new TypeError(`[${operation.name}]: invalid type of arguments`);
+    }
 
     if (confirm('Хотите продолжить?')) {
         startCalculator();
