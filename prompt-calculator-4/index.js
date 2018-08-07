@@ -37,10 +37,10 @@ const startCalculator = () => {
     const operation = calculate[choiceToDo];
     const result = operation(firstNumber, secondNumber);
 
-    if (isNumber(result)) {
-        alert(result);
+    if (!isNumber(firstNumber) && !isNumber(secondNumber)) {
+        throw new TypeError(`Invalid type of arguments`);
     } else {
-        throw new TypeError(`[${operation.name}]: invalid type of arguments`);
+        alert(result);
     }
 
     if (confirm('Хотите продолжить?')) {
