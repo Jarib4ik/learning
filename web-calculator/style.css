@@ -1,0 +1,38 @@
+.calculator {
+    margin: 5% 30%;
+}
+
+.arg1 {
+    width:auto;
+    float:left; 
+    height:auto; 
+}
+
+.arg2 {
+    width:auto;
+    float:right; 
+    height:auto; 
+}
+
+.operation {
+    width:auto;
+    padding-left: 34%;
+    float: left; 
+    height:auto; 
+}
+
+.result {
+    float: left;
+    width: 100%;
+}
+
+button {
+    width: 15%;
+    float: left;
+    padding: 0% 5%;
+}
+
+.buttonSpase {
+    float: left;
+    margin: 0% 2.5%;
+}
