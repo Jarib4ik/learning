@@ -26,13 +26,56 @@
     width: 100%;
 }
 
-button {
-    width: 15%;
+.operButton button {
+    width: 16%;
     float: left;
-    padding: 0% 5%;
+    margin: 2% 0 5% 0;
 }
 
-.buttonSpase {
-    float: left;
-    margin: 0% 2.5%;
+.operButton button:nth-child(2) {
+    position: relative;
+    left: 5%;
+    right: 5%;
+    padding: 0 2.5% inherit;
 }
+
+.operButton button:nth-child(3) {
+    position: relative;
+    left: 10%;
+    right: 10%;
+    padding: 0 2.5% inherit;
+}
+
+.operButton button:nth-child(4) {
+    position: relative;
+    left: 15%;
+    right: 15%;
+    padding: 0 2.5% inherit;
+}
+
+.operButton button:nth-child(5) {
+    float: right;
+}
+
+
+.numButton button {
+    margin: 0 0 2% 0;
+    width: 30%;
+    float: left;
+    padding: 2% 0;
+}
+
+.numButton button:nth-child(2), .numButton button:nth-child(5), .numButton button:nth-child(8) {
+    position: relative;
+    left: 5%;
+    right: 5%;
+}
+.numButton button:nth-child(3), .numButton button:nth-child(6), .numButton button:nth-child(9) {
+    float: right;
+}
+
+.numButton button:nth-child(10) {
+    left: 35%; 
+    position: relative; 
+}
+
