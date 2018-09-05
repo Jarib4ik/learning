@@ -13,7 +13,7 @@
 <body>
     <div class="calculator">
         <h1>Calculator</h1>
-        
+
         <div class="arg1">
             <p>Argument 1</p>
             <hr>
@@ -32,29 +32,38 @@
         </div>
 
         <div class="operButton">
-            <button>С</button>
-            <button>+</button>
-            <button>-</button>
-            <button>*</button>
-            <button>/</button>
+            <input type="button" value="С" />
+            <input type="button" value="+" />
+            <input type="button" value="-" />
+            <input type="button" value="*" />
+            <input type="button" value="/" />
         </div>
 
         <div class="numButton">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-
-            <button>0</button>
+            <input type="button" class="number" value="7" />
+            <input type="button" class="number" value="8" />
+            <input type="button" class="number" value="9" />
+            <input type="button" class="number" value="4" />
+            <input type="button" class="number" value="5" />
+            <input type="button" class="number" value="6" />
+            <input type="button" class="number" value="1" />
+            <input type="button" class="number" value="2" />
+            <input type="button" class="number" value="3" />
+            <input type="button" class="number" value="0" />
         </div>
     </div>
+    <script>
+        const numButtons = document.querySelector('.numButton');
+        const operButtons = document.querySelector('.operButton');
+
+        numButtons.addEventListener('click', function (e) {
+            console.log(e.target.value)
+        });
+        
+        operButtons.addEventListener('click', function (e) {
+            console.log(e.target.value)
+        });
+    </script>
 </body>
 
 </html>

@@ -3,22 +3,24 @@
 }
 
 .arg1 {
-    width:auto;
+    width:14%;
     float:left; 
-    height:auto; 
+    height:auto;
+    white-space:  nowrap;
 }
 
 .arg2 {
-    width:auto;
-    float:right; 
-    height:auto; 
+    width: 14%;;
+    float:left; 
+    height:auto;
+    white-space:  nowrap; 
 }
 
 .operation {
-    width:auto;
-    padding-left: 34%;
+    width: 14%;;
+    margin: 0 29%;
     float: left; 
-    height:auto; 
+    white-space:  nowrap; 
 }
 
 .result {
@@ -26,55 +28,55 @@
     width: 100%;
 }
 
-.operButton button {
+.operButton input {
     width: 16%;
     float: left;
     margin: 2% 0 5% 0;
 }
 
-.operButton button:nth-child(2) {
+.operButton input:nth-child(2) {
     position: relative;
     left: 5%;
     right: 5%;
     padding: 0 2.5% inherit;
 }
 
-.operButton button:nth-child(3) {
+.operButton input:nth-child(3) {
     position: relative;
     left: 10%;
     right: 10%;
     padding: 0 2.5% inherit;
 }
 
-.operButton button:nth-child(4) {
+.operButton input:nth-child(4) {
     position: relative;
     left: 15%;
     right: 15%;
     padding: 0 2.5% inherit;
 }
 
-.operButton button:nth-child(5) {
+.operButton input:nth-child(5) {
     float: right;
 }
 
 
-.numButton button {
+.numButton input {
     margin: 0 0 2% 0;
     width: 30%;
     float: left;
     padding: 2% 0;
 }
 
-.numButton button:nth-child(2), .numButton button:nth-child(5), .numButton button:nth-child(8) {
+.numButton input:nth-child(2), .numButton input:nth-child(5), .numButton input:nth-child(8) {
     position: relative;
     left: 5%;
     right: 5%;
 }
-.numButton button:nth-child(3), .numButton button:nth-child(6), .numButton button:nth-child(9) {
+.numButton input:nth-child(3), .numButton input:nth-child(6), .numButton input:nth-child(9) {
     float: right;
 }
 
-.numButton button:nth-child(10) {
+.numButton input:nth-child(10) {
     left: 35%; 
     position: relative; 
 }
