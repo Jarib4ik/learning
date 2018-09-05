@@ -2,6 +2,16 @@
     margin: 5% 30%;
 }
 
+.itemValue {
+    border-bottom: 1px solid #000;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 20px;
+    font-weight: 20px;
+    
+}
+
 .arg1 {
     width:14%;
     float:left; 

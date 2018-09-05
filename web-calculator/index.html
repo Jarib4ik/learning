@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,15 +15,15 @@
 
         <div class="arg1">
             <p>Argument 1</p>
-            <hr>
+            <span class="itemValue"></span>
         </div>
         <div class="operation">
             <p>Operation</p>
-            <hr>
+            <span class="itemValue"></span>
         </div>
         <div class="arg2">
             <p>Argument 2</p>
-            <hr>
+            <span class="itemValue"></span>
         </div>
         <div class="result">
             <p>Result</p>
@@ -52,18 +51,9 @@
             <input type="button" class="number" value="0" />
         </div>
     </div>
-    <script>
-        const numButtons = document.querySelector('.numButton');
-        const operButtons = document.querySelector('.operButton');
 
-        numButtons.addEventListener('click', function (e) {
-            console.log(e.target.value)
-        });
-        
-        operButtons.addEventListener('click', function (e) {
-            console.log(e.target.value)
-        });
-    </script>
+
+    <script src="index.js"></script>
 </body>
 
 </html>
