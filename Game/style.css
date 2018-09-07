@@ -45,6 +45,10 @@ span {
     visibility: hidden;
 }
 
+.span-visible {
+    visibility: visible;
+}
+
 .flex-item-third {
     background: linear-gradient(to top left, #f34949, #fc2574d6);
     border-radius: 3%;

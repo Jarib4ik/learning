@@ -1,7 +1,13 @@
 const buttons = document.querySelector('.flex-container-second');
 
 buttons.addEventListener('click', function (e) {
-  console.log(e.target.textContent)
+  e.target.setAttribute('class','flex-item-third')
+});
+
+const butNum = document.querySelector('.flex-container-second .flex-item-second');
+
+butNum.addEventListener('click', function (e) {
+  e.target.setAttribute('class','span-visible')
 });
 
 
@@ -33,9 +39,10 @@ let c = [0, ...a, ...b];
 
 function pushNumbers(arr) {
   for (let i = 1; i < arr.length; i++) {
-    let card = document.querySelector(`.flex-item-second:nth-child(${i})`);
-    card.span.textContent = arr[i];
+    let card = document.querySelector(`.flex-item-second:nth-child(${i}) span`);
+    card.insertAdjacentText(`afterBegin`, arr[i] );
   }
 }
+
 
 pushNumbers(c);
