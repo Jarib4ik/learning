@@ -39,10 +39,10 @@ function changeNum() {
   function pushNumbers(arr) {
     for (let i = 1; i < arr.length; i++) {
       let card = document.querySelector(`.flex-item-second:nth-child(${i}) span`);
-      card.insertAdjacentText(`afterBegin`, arr[i]);
+      card.textContent = arr[i];
     }
   }
   pushNumbers(c);
 }
 
-changeNum().clearValue
+changeNum()
