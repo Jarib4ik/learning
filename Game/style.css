@@ -42,7 +42,7 @@ span {
 }
 
 .span-nane {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .span-visible {
