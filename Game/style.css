@@ -21,7 +21,8 @@
 .flex-container-second {
     width: 68%;
     display: flex;
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -31,7 +32,7 @@
     border: 1px solid #bababa;
     color: #ffffff;
     padding: 10%;
-    margin: 2%;
+    margin: 2% 0%;
 }
 
 span {
@@ -42,7 +43,7 @@ span {
 }
 
 .span-nane {
-    visibility: visible;
+    visibility: hidden;
 }
 
 .span-visible {
@@ -55,5 +56,5 @@ span {
     border: 1px solid #bababa;
     color: #ffffff;
     padding: 10%;
-    margin: 2%;
+    margin: 2% 0%;
 }
