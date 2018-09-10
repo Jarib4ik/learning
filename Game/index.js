@@ -1,42 +1,65 @@
 (function () {
   const buttons = document.querySelector('.flex-container-second');
-  const startButton = document.querySelector('.button');
   let firstNum = null;
-  let secondNum = null
+  let secondNum = null;
 
   buttons.addEventListener('click', function (e) {
-    if (firstNum > 0) {
-      if (e.target.classList.contains('flex-item-second')) {
-        e.target.classList.toggle('flex-item-third', true)
-        e.target.firstElementChild.classList.toggle('span-visible')
-      }
-      secondNum = e.target.firstElementChild.textContent;
-      if (firstNum === secondNum) {
 
-      }
-
-    } else if (firstNum === null) {
-      if (e.target.classList.contains('flex-item-second')) {
-        e.target.classList.toggle('flex-item-third', true)
-        e.target.firstElementChild.classList.toggle('span-visible')
-      }
-      firstNum = e.target.firstElementChild.textContent;
+    if (!e.target.classList.contains('flex-item-second')) {
+      return;
+    }
+    if (secondNum) {
+      return;
+    }
+    if (!firstNum) {
+      firstNum = e.target;
+      e.target.classList.toggle('flex-item-third', true);
+      e.target.firstElementChild.classList.toggle('span-visible', true);
     } else {
-      if (e.target.classList.contains('flex-item-second')) {
-        e.target.classList.toggle('flex-item-third', false)
-        e.target.firstElementChild.classList.toggle('span-visible')
+      secondNum = e.target;
+      if (firstNum.firstElementChild !== secondNum.firstElementChild && firstNum.firstElementChild.textContent === secondNum.firstElementChild.textContent) {
+        e.target.classList.toggle('flex-item-third', true);
+        e.target.firstElementChild.classList.toggle('span-visible', true);
+        function deleteCard() {
+          firstNum.firstElementChild.parentNode.parentNode.removeChild(firstNum.firstElementChild.parentNode);
+          secondNum.firstElementChild.parentNode.parentNode.removeChild(secondNum.firstElementChild.parentNode);
+          firstNum = null;
+          secondNum = null;
+        }
+        setTimeout(deleteCard, 1000);
+      } else {
+        e.target.classList.toggle('flex-item-third', true);
+        e.target.firstElementChild.classList.toggle('span-visible', true);
+
+        function closeCard() {
+          firstNum.classList.toggle('flex-item-third', false);
+          firstNum.firstElementChild.classList.toggle('span-visible', false);
+          secondNum.classList.toggle('flex-item-third', false);
+          secondNum.firstElementChild.classList.toggle('span-visible', false);
+          firstNum = null;
+          secondNum = null;
+        }
+        setTimeout(closeCard, 1000);
       }
-      firstNum = null;
     }
+
   });
 
-  startButton.addEventListener('click', function (e) {
+  const changeNum = document.querySelector('.button');
+
+  changeNum.addEventListener('click', function (e) {
     if (firstNum === null) {
-      changeNum();
+      generate();
     }
   });
 
-  function changeNum() {
+  const startButton = document.querySelector('.button-container .button:nth-child(2)')
+
+  startButton.addEventListener('click', function(e) {
+    location.href = 'index.html';
+  });
+
+  function generate() {
 
     function randomInteger(min, max) {
       var rand = min + Math.random() * (max + 1 - min);
@@ -47,7 +70,7 @@
     function randomArr() {
       const elementSum = document.querySelectorAll('.span-nane').length;
       let maxNum = elementSum / 2;
-      let arr = []
+      let arr = [];
 
       for (let i = 0; arr.length < maxNum; i++) {
         rand = randomInteger(1, maxNum);
@@ -55,7 +78,7 @@
           arr.push(rand);
         }
       }
-      return arr
+      return arr;
     }
 
     let firstArr = randomArr();
@@ -73,5 +96,5 @@
     pushNumbers(resultArr);
   }
 
-  changeNum()
+  generate();
 })();
