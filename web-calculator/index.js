@@ -15,7 +15,7 @@ let operatValue = '';
 const numButtons = document.querySelector('.numButton');
 const args1 = document.querySelector('.arg1 .itemValue:nth-child(2)');
 const args2 = document.querySelector('.arg2 .itemValue:nth-child(2)');
-const resultValue = document.querySelector('.result .itemValue:nth-child(2)');
+const resultValue = document.querySelector('.result .resultValue:nth-child(2)');
 
 let argument1 = '';
 let argument2 = '';
@@ -55,6 +55,7 @@ operButtons.addEventListener('click', function (e) {
             argument1 = '';
             argument2 = '';
             operatValue = '';
+            resultValue.textContent = '';
         } else {
             operation.textContent = e.target.dataset.operation;
             operatValue = operation.textContent;
