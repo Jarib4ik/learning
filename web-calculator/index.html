@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="utils.js"></script>
+    <script src="basic-math.js"></script>
 </head>
 
 <body>
     <div class="calculator">
         <h1>Calculator</h1>
 
-        <div class="arg1">
+        <div class="arg">
             <p>Argument 1</p>
             <span class="itemValue"></span>
         </div>
@@ -21,7 +23,7 @@
             <p>Operation</p>
             <span class="itemValue"></span>
         </div>
-        <div class="arg2">
+        <div class="arg">
             <p>Argument 2</p>
             <span class="itemValue"></span>
         </div>
@@ -31,24 +33,24 @@
         </div>
 
         <div class="operButton">
-            <input type="button" data-operation="C" value="C"/>
-            <input type="button" data-operation="+" value="+"/>
-            <input type="button" data-operation="-" value="-"/>
-            <input type="button" data-operation="*" value="*"/>
-            <input type="button" data-operation="/" value="/"/>
+            <input type="button" data-operation="C" value="C" />
+            <input type="button" data-operation="+" value="+" />
+            <input type="button" data-operation="-" value="-" />
+            <input type="button" data-operation="*" value="*" />
+            <input type="button" data-operation="/" value="/" />
         </div>
 
         <div class="numButton">
-            <input type="button" class="number" data-number="7" value="7"/>
-            <input type="button" class="number" data-number="8" value="8"/>
-            <input type="button" class="number" data-number="9" value="9"/>
-            <input type="button" class="number" data-number="4" value="4"/>
-            <input type="button" class="number" data-number="5" value="5"/>
-            <input type="button" class="number" data-number="6" value="6"/>
-            <input type="button" class="number" data-number="1" value="1"/>
-            <input type="button" class="number" data-number="2" value="2"/>
-            <input type="button" class="number" data-number="3" value="3"/>
-            <input type="button" class="number" data-number="0" value="0"/>
+            <input type="button" class="number" data-number="7" value="7" />
+            <input type="button" class="number" data-number="8" value="8" />
+            <input type="button" class="number" data-number="9" value="9" />
+            <input type="button" class="number" data-number="4" value="4" />
+            <input type="button" class="number" data-number="5" value="5" />
+            <input type="button" class="number" data-number="6" value="6" />
+            <input type="button" class="number" data-number="1" value="1" />
+            <input type="button" class="number" data-number="2" value="2" />
+            <input type="button" class="number" data-number="3" value="3" />
+            <input type="button" class="number" data-number="0" value="0" />
         </div>
     </div>
 

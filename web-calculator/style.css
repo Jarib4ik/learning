@@ -2,6 +2,22 @@
     margin: 5% 30%;
 }
 
+.arg {
+    width:14%;
+    float:left; 
+    height:auto;
+    white-space:  nowrap;
+    text-align: center;
+}
+
+.operation {
+    width: 14%;;
+    margin: 0 29%;
+    float: left; 
+    white-space:  nowrap;
+    text-align: center; 
+}
+
 .itemValue {
     border-bottom: 1px solid #000;
     width: 100%;
@@ -11,6 +27,11 @@
     font-weight: 20px;
 }
 
+.result {
+    float: left;
+    width: 100%;
+}
+
 .resultValue {
     border-bottom: 1px solid #000;
     width: 100%;
@@ -18,32 +39,6 @@
     text-align: right;
     height: 20px;
     font-weight: 20px;
-}
-
-.arg1 {
-    width:14%;
-    float:left; 
-    height:auto;
-    white-space:  nowrap;
-}
-
-.arg2 {
-    width: 14%;;
-    float:left; 
-    height:auto;
-    white-space:  nowrap; 
-}
-
-.operation {
-    width: 14%;;
-    margin: 0 29%;
-    float: left; 
-    white-space:  nowrap; 
-}
-
-.result {
-    float: left;
-    width: 100%;
 }
 
 .operButton input {
@@ -76,7 +71,6 @@
 .operButton input:nth-child(5) {
     float: right;
 }
-
 
 .numButton input {
     margin: 0 0 2% 0;
