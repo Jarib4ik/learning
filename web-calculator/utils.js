@@ -6,7 +6,7 @@ const quardify = (validator, exception, func) => {
 
         if (isValidArgs) {
             return func(...args);
-        }else {
+        } else {
             const { name } = func;
             const finalException = `[${name}]: ${exception}`;
 
