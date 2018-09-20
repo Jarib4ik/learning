@@ -1,10 +1,17 @@
-const numButtons = document.querySelector('.numButton');
-const args1 = document.querySelector('.arg:nth-child(2) .itemValue:nth-child(2)');
-const args2 = document.querySelector('.arg:nth-child(4) .itemValue:nth-child(2)');
-const resultValue = document.querySelector('.result .resultValue:nth-child(2)');
-const operButtons = document.querySelector('.operButton');
-const operation = document.querySelector('.operation .itemValue:nth-child(2)');
+const args1 = document.getElementById('arg1')
+const args2 = document.getElementById('arg2')
+const operation = document.getElementById('operation')
+const resultValue = document.getElementById('result')
+
 const MAX_ARGUMENT_LENGTH = 5;
+const MIN_NUM_KEY = 48;
+const MAX_NUM_KEY = 57;
+
+const CLEAR = 99;
+const PLUS = 43;
+const MINUS = 45;
+const MULYIPLY = 42;
+const DIVISION = 47;
 
 const calculate = {
     '+': BasicMath.add,
@@ -13,29 +20,27 @@ const calculate = {
     '/': BasicMath.div,
 };
 
-let operatValue = '';
-let argument1 = '';
-let argument2 = '';
+document.addEventListener('keyup', function (e) {
+    let key = e.key;
+    let keyCharCode = key.charCodeAt(0);
 
-numButtons.addEventListener('click', function (e) {
-    if (!operatValue) {
+    if (!operation.textContent) {
         if (!args1.textContent.length || args1.textContent.length < MAX_ARGUMENT_LENGTH) {
-            args1.textContent += e.target.dataset.number;
-            argument1 = args1.textContent;
+            if (keyCharCode >= MIN_NUM_KEY && keyCharCode <= MAX_NUM_KEY)
+                args1.textContent += e.key;
         }
     } else {
         if (args2.textContent.length < MAX_ARGUMENT_LENGTH) {
-            args2.textContent += e.target.dataset.number;
-            argument2 = args2.textContent;
-            const checkFunction = calculate[operatValue];
-            resultValue.textContent = checkFunction(Number(argument1), Number(args2.textContent));
+            if (keyCharCode >= MIN_NUM_KEY && keyCharCode <= MAX_NUM_KEY)
+                args2.textContent += e.key;
+
+            const checkFunction = calculate[operation.textContent];
+            resultValue.textContent = checkFunction(Number(args1.textContent), Number(args2.textContent));
         }
     }
-});
 
-operButtons.addEventListener('click', function (e) {
-    if (argument1) {
-        if (e.target.dataset.operation === 'C') {
+    if (args1.textContent) {
+        if (keyCharCode === CLEAR) {
             args1.textContent = '';
             args2.textContent = '';
             operation.textContent = '';
@@ -45,12 +50,11 @@ operButtons.addEventListener('click', function (e) {
             resultValue.textContent = '';
         } else {
             if (!operation.textContent) {
-                operation.textContent = e.target.dataset.operation;
-                operatValue = operation.textContent;
+                if (keyCharCode === PLUS || keyCharCode === MINUS || keyCharCode === MULYIPLY || keyCharCode === DIVISION)
+                    operation.textContent = key;
             }
         }
     }
 });
-
 
 
