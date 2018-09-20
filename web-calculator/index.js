@@ -4,6 +4,7 @@ const args2 = document.querySelector('.arg:nth-child(4) .itemValue:nth-child(2)'
 const resultValue = document.querySelector('.result .resultValue:nth-child(2)');
 const operButtons = document.querySelector('.operButton');
 const operation = document.querySelector('.operation .itemValue:nth-child(2)');
+const MAX_ARGUMENT_LENGTH = 5;
 
 const calculate = {
     '+': BasicMath.add,
@@ -18,12 +19,12 @@ let argument2 = '';
 
 numButtons.addEventListener('click', function (e) {
     if (!operatValue) {
-        if (!args1.textContent.length || args1.textContent.length < 5) {
+        if (!args1.textContent.length || args1.textContent.length < MAX_ARGUMENT_LENGTH) {
             args1.textContent += e.target.dataset.number;
             argument1 = args1.textContent;
         }
     } else {
-        if (args2.textContent.length < 5) {
+        if (args2.textContent.length < MAX_ARGUMENT_LENGTH) {
             args2.textContent += e.target.dataset.number;
             argument2 = args2.textContent;
             const checkFunction = calculate[operatValue];
