@@ -1,54 +1,63 @@
-html {
+html, body, div, ul, li, a, p {
     margin: 0;
     padding: 0;
+    border: 0;
     background: #030615;
     color: #ffffff;
 }
 
-.header_container{
-    margin: 0 20%;
+header {
+    margin: 2% 20%;
     display: grid;
-    grid-template-columns: 50% 50%
+    grid-template-columns: 1fr 1fr;
 
 }
 
-.header_name{
+.header-name{
     text-align: left;
     font-size: 2rem;
 }
 
-.header_phone {
+.header-phone {
     text-align: right;
     font-size: 2rem;
 }
 
-.main_container {
+main {
+    border-top:1px #d2d4f5 solid;
+    border-bottom:1px #d2d4f5 solid;
     margin: 5% 20%;
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 1fr 9fr;
    
 }
 
-.left_side {
-    border-right: #8689b2 2px solid;
+.left-side {
+    border-right: #d2d4f5 1px solid;
     height: auto;
 }
 
-.left_side ul {
+.left-side ul {
     list-style: none;
 }
 
-.left_side a {
+.left-side ul li {
+    padding: 30% 0;
+    border-bottom: 1px #d2d4f5 solid;
+}
+
+.left-side a {
     text-decoration: none;
-    color: #8689b2;
+    color: #d2d4f5;
     font-size: 1.5rem;
 }
 
-.left_side a:hover {
-    color: #d2d4f5;
+.left-side a:hover {
+    color: #8689b2;
 }
 
-.right_side {
-    height: auto;
+.right-side {
+    
+    
 }
 
