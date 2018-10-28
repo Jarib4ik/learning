@@ -99,8 +99,22 @@ main {
     
 }
 
-.icon {
-    border-right: #8689b2 1px solid;
+.icon-done:before {
+    content: url(./img/icons8-realtime-50.png);
+    width: 100%;
+    height: 100%;
+}
+
+.icon-todo:before {
+    content: url(./img/icons8-to-do-50.png);
+    width: 100%;
+    height: 100%;
+}
+
+.icon-inprogres:before {
+    content: url(./img/icons8-system-task-50.png);
+    width: 100%;
+    height: 100%;
 }
 
 .ticket-text {
@@ -108,7 +122,7 @@ main {
 }
 
 .ticket-text p {
-    padding: 1.5%;
+    padding: 1.8%;
 }
 
 .ticket-date {
@@ -131,12 +145,40 @@ main {
     margin: 0 auto;
     border: 0;
     border-radius: 0;
-    background: #8689b2;
+    background: #030615;
     color: #ffffff;
     font-size: 16px;
     line-height: 1;
 }
 
 .checkbox select:hover {
-    color: #030615;
+    color: #8689b2;
+}
+
+footer {
+    margin: 0 20%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footer-links {
+    text-align: left;
+}
+
+.footer-links a {
+    margin-right: 3%; 
+    text-decoration: none;
+    color: #8689b2;
+}
+
+.footer-links a:hover {
+    color: #d2d4f5;
+}
+
+.copyright {
+    text-align: right;
+}
+
+.copyright p {
+    color: #8689b2;
 }
