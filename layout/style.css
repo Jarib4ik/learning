@@ -24,8 +24,6 @@ header {
 }
 
 main {
-    border-top:1px #d2d4f5 solid;
-    border-bottom:1px #d2d4f5 solid;
     margin: 5% 20%;
     display: grid;
     grid-template-columns: 1fr 9fr;
@@ -46,10 +44,6 @@ main {
     border-bottom: 1px #d2d4f5 solid;
 }
 
-.left-side ul li:nth-child(4) {
-    border-bottom: none;
-}
-
 .left-side a {
     text-decoration: none;
     color: #d2d4f5;
@@ -60,17 +54,11 @@ main {
     color: #8689b2;
 }
 
-.right-side {
-    
-    
-}
-
 .tabs {
-    margin: 2% 0 0 5%;
+    margin: 2% 0 0 2%;
     display: grid;
     grid-template-columns: 10% 10% 10%;
     text-align: center;
-    border-bottom: #8689b2 2px solid;
 }
 
 .tabs a {
@@ -78,20 +66,77 @@ main {
     font-weight: bold;
 }
 
-.tabs_item {
+.tabs a:hover {
+    color: #8689b2;
+}
+
+.tabs-item {
+    padding: 7%;
+    border: #8689b2 2px solid;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    font-size: 1rem; 
+}
+
+.tabs-item-click {
     padding: 5%;
     border: #8689b2 2px solid;
     border-bottom: none;
-    border-radius: 20px 0 0 0; 
+    font-size: 1.2rem;
 }
 
-.tickets_container {
-    height: auto;
-    margin: 2% 0 2% 2%;
+.tickets-container {
+    height: 500px;
+    margin: 0% 0 2% 2%;
     border: #8689b2 1px solid;
 }
 
 .ticket {
-    height: 100px;
-    border: #8689b2 1px solid;
+    height: auto;
+    border-bottom: #8689b2 1px solid;
+    display: grid;
+    grid-template-columns: 5% 80% 10% 5%;
+    
+}
+
+.icon {
+    border-right: #8689b2 1px solid;
+}
+
+.ticket-text {
+    border-right: #8689b2 1px solid;
+}
+
+.ticket-text p {
+    padding: 1.5%;
+}
+
+.ticket-date {
+    border-right: #8689b2 1px solid;
+    text-align: center;
+}
+
+.ticket-date p {
+    padding: 15%;
+}
+
+.checkbox {
+    border-right: #8689b2 1px solid;
+}
+
+.checkbox select {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 0;
+    background: #8689b2;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.checkbox select:hover {
+    color: #030615;
 }
