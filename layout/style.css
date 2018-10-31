@@ -6,7 +6,7 @@ html, body, div, ul, li, a, p {
     color: #ffffff;
 }
 
-header {
+.header {
     margin: 2% 20%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,15 +23,14 @@ header {
     font-size: 2rem;
 }
 
-main {
+.main-container {
     margin: 5% 20%;
     display: grid;
     grid-template-columns: 1fr 9fr;
-   
 }
 
 .left-side {
-    border-right: #d2d4f5 1px solid;
+    border-right: #d2d4f5 3px solid;
     height: auto;
 }
 
@@ -41,7 +40,7 @@ main {
 
 .left-side ul li {
     padding: 30% 0;
-    border-bottom: 1px #d2d4f5 solid;
+    border-bottom: 3px #d2d4f5 solid;
 }
 
 .left-side a {
@@ -95,7 +94,7 @@ main {
     height: auto;
     border-bottom: #8689b2 1px solid;
     display: grid;
-    grid-template-columns: 5% 80% 10% 5%;
+    grid-template-columns: 10% 65% 15% 10%;
     
 }
 
@@ -122,7 +121,7 @@ main {
 }
 
 .ticket-text p {
-    padding: 1.8%;
+    padding-top: 4%;
 }
 
 .ticket-date {
@@ -131,32 +130,45 @@ main {
 }
 
 .ticket-date p {
-    padding: 15%;
+    padding-top: 17%;
 }
 
 .checkbox {
+    padding-top: 25%;
     border-right: #8689b2 1px solid;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
 }
 
-.checkbox select {
-    height: 100%;
-    width: 100%;
-    padding: 5px;
-    margin: 0 auto;
-    border: 0;
-    border-radius: 0;
-    background: #030615;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1;
+.sub-checkbox {
+    display: none;
+    position: absolute;
+    list-style: none;
+    text-align: center;
 }
 
-.checkbox select:hover {
+ .checkbox li:hover .sub-checkbox {
+    display: block;
+    z-index: 111;
+}
+
+.sub-checkbox li {
+    border: #8689b2 1px solid;
+    width: 70px;;
+    text-align: center;
+    color: #d2d4f5;
+    cursor: pointer;
+}
+
+.sub-checkbox li:hover {
+    border: #d2d4f5 1px solid;
     color: #8689b2;
 }
 
-footer {
-    margin: 0 20%;
+.footer {
+    margin: 2% 20%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
